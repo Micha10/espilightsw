@@ -1,0 +1,6 @@
+file(GLOB actions "${PROJECT_SOURCE_DIR}/actions/*.lua")
+if(WIN32)
+	install(FILES ${actions} DESTINATION actions/ COMPONENT pilight)
+else()
+	install(FILES ${actions} DESTINATION lib/pilight/actions/ COMPONENT pilight)
+endif()
