@@ -1,0 +1,52 @@
+esphome:
+  name: espilight
+  includes:
+    - espilightsw.h
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+external_components:
+  source:
+    type: git
+    #url: http://140.82.121.3/Micha10/espilightsw
+    url: https://github.com/Micha10/espilightsw
+    #url: https://github.com/esphome/esphome
+    # ref: main
+  components: [ espilightsw ]
+  refresh: 10s
+
+#switch:
+#  - platform: espilightsw
+espilightsw:
+    pin: 19
+    protocol: "quigg_gt1000"
+    data: "{\"id\":1,\"unit\":1,\"state\":\"on\"}"
+
+switch:
+  platform: gpio
+  pin: 2
+  id: t2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  password: ""
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Espilight Fallback Hotspot"
+    password: "ZK4AVQVxBJ97"
+
+captive_portal:
