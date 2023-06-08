@@ -4,7 +4,7 @@
 
 #include "esphome/core/component.h"
 #include "esphome/components/switch/switch.h"
-#include "espilight/src/ESPiLight.h"
+#include "ESPiLight/src/ESPiLight.h"
 
 namespace esphome {
 namespace espilightsw {
