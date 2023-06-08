@@ -4,7 +4,7 @@
 
 #include "esphome.h"
 #include "esphome/core/component.h"
-//#include "esphome/components/switch/switch.h"
+#include "esphome/components/switch/switch.h"
 //#include "ESPiLight/src/ESPiLight.h"
 #include <ESPiLight.h>
 
