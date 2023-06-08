@@ -3,7 +3,7 @@
 #define _ESPILIGHTSW_INCLUDE
 
 #include "esphome/core/component.h"
-//#include <esphome/components/switch/switch.h>
+//#include "esphome/components/switch/switch.h"
 //#include "ESPiLight/src/ESPiLight.h"
 #include <ESPiLight.h>
 
@@ -12,7 +12,7 @@ namespace espilightsw {
 
 
 /// This class implements calculation of absolute humidity from temperature and relative humidity.
-class EspilightComponent : public switch_::Switch, public Component {
+class EspilightComponent : public Switch, public Component {
  public:
   EspilightComponent() = default;
 
