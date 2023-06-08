@@ -2,6 +2,7 @@
 #ifndef _ESPILIGHTSW_INCLUDE
 #define _ESPILIGHTSW_INCLUDE
 
+#include "esphome.h"
 #include "esphome/core/component.h"
 //#include "esphome/components/switch/switch.h"
 //#include "ESPiLight/src/ESPiLight.h"
