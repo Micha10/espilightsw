@@ -14,7 +14,7 @@ namespace esphome {
 
 
 /// This class implements calculation of absolute humidity from temperature and relative humidity.
-        class EspilightComponent : public Switch, public Component {
+        class EspilightComponent : public esphome::switch_::Switch, public esphome::Component {
         public:
             EspilightComponent() = default;
 
