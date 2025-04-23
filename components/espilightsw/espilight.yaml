@@ -12,14 +12,7 @@ external_components:
   - source:
       type: git
       url: https://github.com/Micha10/espilightsw
-      # ref: main
     components: [ espilightsw ]
-    refresh: 10s
-  - source:
-      type: git
-      url: https://github.com/puuu/ESPiLight
-      # ref: main
-    components: [ espilight ]
     refresh: 10s
 
 #switch:
