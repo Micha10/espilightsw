@@ -4,8 +4,9 @@ from esphome.components import switch
 from esphome import pins
 from esphome.const import CONF_ID, CONF_PIN
 
-#DEPENDENCIES = ["espilight"]
+# DEPENDENCIES = ["espilight"]
 
+# Das sind die zu verwendenden Bezeichner in der Config.yaml
 CONF_PROTOCOL_NAME = "protocol"
 CONF_PROTOCOL_DATA = "data"
 
@@ -17,7 +18,7 @@ EspilightComponent = espilight_ns.class_(
 CONFIG_SCHEMA = cv.Schema(
     {
         cv.GenerateID(): cv.declare_id(EspilightComponent),
-        #cv.Required(CONF_PIN): pins.internal_gpio_output_pin_schema,
+        # cv.Required(CONF_PIN): pins.internal_gpio_output_pin_schema,
         cv.Required(CONF_PIN): int,
         cv.Required(CONF_PROTOCOL_NAME): cv.string,
         cv.Required(CONF_PROTOCOL_DATA): cv.string,
@@ -44,4 +45,4 @@ async def to_code(config):
     # cg.add(var.set_protocol_data(config[CONF_PROTOCOL_DATA]))
 
     # cg.add(paren.register_sensor(var))
-    #cg.add_library("puuu/espilight", "0.17.0")
+    # cg.add_library("puuu/espilight", "0.17.0")
