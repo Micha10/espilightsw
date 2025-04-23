@@ -1,7 +1,7 @@
 esphome:
   name: espilight
-  includes:
-    - espilightsw.h
+#  includes:
+#    - espilightsw.h
 
 esp32:
   board: esp32dev
@@ -9,21 +9,25 @@ esp32:
     type: arduino
 
 external_components:
-  source:
-    type: git
-    #url: http://140.82.121.3/Micha10/espilightsw
-    url: https://github.com/Micha10/espilightsw
-    #url: https://github.com/esphome/esphome
-    # ref: main
-  components: [ espilightsw ]
-  refresh: 10s
+  - source:
+      type: git
+      url: https://github.com/Micha10/espilightsw
+      # ref: main
+    components: [ espilightsw ]
+    refresh: 10s
+  - source:
+      type: git
+      url: https://github.com/puuu/ESPiLight
+      # ref: main
+    components: [ espilight ]
+    refresh: 10s
 
 #switch:
 #  - platform: espilightsw
 espilightsw:
-    pin: 19
-    protocol: "quigg_gt1000"
-    data: "{\"id\":1,\"unit\":1,\"state\":\"on\"}"
+  pin: 19
+  protocol: "quigg_gt1000"
+  data: "{\"id\":1,\"unit\":1,\"state\":\"on\"}"
 
 switch:
   platform: gpio
@@ -37,8 +41,8 @@ logger:
 api:
   password: ""
 
-ota:
-  password: ""
+#ota:
+#  password: ""
 
 wifi:
   ssid: !secret wifi_ssid
