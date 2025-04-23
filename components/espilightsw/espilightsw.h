@@ -27,14 +27,14 @@ namespace esphome {
             void dump_config() {
                 LOG_SWITCH(TAG, "Espilight name", this->protocol_name_);
                 LOG_SWITCH(TAG, "Espilight data", this->protocol_data_);
-                LOG_PIN("Pin:", this->pin_);
+                //LOG_PIN("Pin:", this->pin_);
             }
 
             void setup() {
                 ESP_LOGI(TAG, "Initializing");
             }
 
-            float get_setup_priority() const override;
+            //float get_setup_priority() const override;
 
             switch_::Switch *source_{nullptr};
             ESPiLight *pespilight{nullptr};
